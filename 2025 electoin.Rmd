@@ -92,7 +92,7 @@ first_survey <- complete_survey%>%
     q3,#gender male=1, female=2
     q61,#level of education from 1 to 1
     q13,# satisfied with Justin Trudeau, from very to not at all, 1-4
-    q37,# in own local riding who are more likely to win(从重心理)
+    q37,# in own local riding who are more likely to win
     q4,# which province
     q11 # response variable after adjusted to binary "vote_liberal"
     )%>%
