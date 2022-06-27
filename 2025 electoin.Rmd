@@ -1,6 +1,6 @@
 ---
 title: "2025 Canadian Federal Election Prediction"
-author: " Jingchi Wei"
+author: "Group 199: Chengyang Pan, Yuanyuan Pan, Jingchi Wei, Zhuowen Dai"
 date: November 5, 2021
 output:
   pdf_document:
