@@ -47,7 +47,6 @@ By the way, almost all the answers to survey questions are represented with numb
 
 ```{r, include = FALSE}
 
-# Here you can load in and clean the census data (you may need to do the cleaning in a separate R script). 
 
 census_data <- read_csv("gss_clean.csv")
 first_census<- census_data%>%
@@ -76,17 +75,11 @@ cleaned_census<- cleaned_census%>%
                              province=="Quebec"~"QC", 
                              province=="Saskatchewan"~"SK")) %>%
   select(gender, age, Canadian, education, province)
-
-
-# You may need additional chunks, in case you want to include some of the cleaning output.
-
 ```
 
-<Here is a resource for grabbing the CES2019 data: [https://awstringer1.github.io/sta238-book/section-short-tutorial-on-pulling-data-for-assignment-1.html#section-canadian-election-study](https://awstringer1.github.io/sta238-book/section-short-tutorial-on-pulling-data-for-assignment-1.html#section-canadian-election-study)>
 
 ```{r,echo=FALSE,include=FALSE}
 
-# Here you can load in and clean the survey data (you may need to do the cleaning in a separate R script). 
 
 # Alternative to what is in the comments above, I have locally loaded
 # and (mildly) cleaned the CES2019 phone data and have included it in here.
@@ -169,7 +162,6 @@ second_survey$province <- case_when(
 
 ```{r, include=FALSE}
 
-#### You will need to update/clean the code below based off the variables you want to use in your poststratification.
 
 second_survey <- second_survey%>%
   mutate(Canadian = ifelse(citizenship == 1, "Yes", "No"))
@@ -262,7 +254,6 @@ Figure1 shows that among liberal party voters, education level of bachelor’s d
 
 ```{r, echo = FALSE, warning=FALSE, fig.height=2.5, fig.width=3.5}
 
-# Use this to create some plots. Should probably describe both the sample and population.
 
 # graph 2 bar plot
 ggplot(data = final_survey, aes(x = age_range)) +
